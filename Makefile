@@ -8,7 +8,11 @@ clean:
 	rm $(BIN)
 	
 build: $(SRC)
-	go build -o $(BIN)
+	# go build -o $(BIN)
+	go build
+
+test:
+	go test -v ./...
 
 run: build
 	go run $(BIN)
